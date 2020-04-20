@@ -23,7 +23,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login")
                 .permitAll()
                 .and()
                 .logout()
@@ -37,7 +36,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 User
                         .withDefaultPasswordEncoder()
                         .username("user")
-                        .password("password")
+                        .password("pass")
                         .roles("USER")
                         .build();
 

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @org.springframework.stereotype.Controller
 public class Controller {
 
-    @GetMapping("/")
+    @GetMapping("/a")
     @ResponseBody
     public String home(){
 
