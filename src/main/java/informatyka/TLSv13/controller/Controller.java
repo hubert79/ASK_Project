@@ -6,10 +6,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @org.springframework.stereotype.Controller
 public class Controller {
 
+    @GetMapping("/")
+    @ResponseBody
+    public String all(){
+        return "Dostępna dla wszystkich";
+    }
+
     @GetMapping("/a")
     @ResponseBody
     public String home(){
 
-        return "To jest test";
+        return "Dla zalogowanych";
     }
 }

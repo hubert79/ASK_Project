@@ -30,7 +30,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    //@Override
     public UserDetailsService userDetailsService() {
         UserDetails user =
                 User
@@ -41,9 +40,5 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                         .build();
 
         return new InMemoryUserDetailsManager(user);
-    }/*
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }*/
+    }
 }
